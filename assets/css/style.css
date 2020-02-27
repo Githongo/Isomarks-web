@@ -1,0 +1,32 @@
+
+.navbar{
+    background-color: #ffffff !important;
+}
+.container-fluid{
+	background:url(logistics.jpg);
+}
+.btn{
+	background-color: #1A9A9A !important;
+}
+.card-title{
+	color: #1A9A9A !important;
+}
+
+.fontstyle{
+	padding: 10px 10px 10px 15px;
+	font-size: 1.875em;
+	margin-left: 10px;
+
+}
+
+.card-deck{
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+	padding-bottom: 15px;
+
+
+}
+
+.showcase{
+	text-align: center !important; 
+}
