@@ -26,17 +26,17 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li class="active"><a href="<?php echo base_url();?>welcome" class="nav-link">Home</a></li>
                 <li><a href="<?php echo base_url();?>welcome/features" class="nav-link">Features</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="<?php echo base_url(); ?>welcome/pricing" class="nav-link">Pricing</a></li>
                 
                 <li class="has-children">
                   <a href="<?php echo base_url();?>login" class="nav-link">Account</a>
                   <ul class="dropdown">
                     <li><a href="<?php echo base_url();?>login" class="nav-link">Login</a></li>
                     <li><a href="<?php echo base_url();?>register" class="nav-link">Sign Up</a></li>
-                    <li><a href="<?php echo base_url();?>registerschool" class="nav-link">Sign Up</a></li>
+                    <li><a href="<?php echo base_url();?>registerschool" class="nav-link">Register School</a></li>
                   </ul>
                 </li>
-                <li><a href="<?php echo base_url();?>contact" class="nav-link">Contact</a></li>
+                <li><a href="<?php echo base_url();?>welcome/contact" class="nav-link">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-lg-5 iphone-wrap">
                   <img src="img/phone_1.png" alt="Image" class="phone-1" data-aos="fade-right">
-                  <img src="img/phone_2.png" alt="Image" class="phone-2" data-aos="fade-right" data-aos-delay="200">
+                  <img src="<?php echo base_url(); ?>images/phone_1.png" alt="Image" class="phone-2" data-aos="fade-right" data-aos-delay="200">
                 </div>
               </div>
             </div>

@@ -9,8 +9,8 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="<?php echo base_url();?>img/favicon.png" rel="icon">
-  <link href="<?php echo base_url();?>img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?php echo base_url();?>images/favicon.png" rel="icon">
+  <link href="<?php echo base_url();?>images/apple-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700|Roboto:300,400,700&display=swap"

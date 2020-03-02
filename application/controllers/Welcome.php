@@ -18,4 +18,16 @@ class Welcome extends CI_Controller {
             $this->load->view('pages/features');
             $this->load->view('templates/footer');
         }
+
+        function pricing(){
+            $this->load->view('templates/header');
+            $this->load->view('pages/pricing');
+            $this->load->view('templates/footer');
+        }
+
+        function contact(){
+            $this->load->view('templates/header');
+            $this->load->view('pages/contact');
+            $this->load->view('templates/footer');
+        }
 }

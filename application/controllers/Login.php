@@ -33,14 +33,17 @@
                         'email' => $email
                     );
                     $this->session->set_userdata($session_data);
-                    if($this->session->userdata('type') == 1){ 
+                    if($this->session->userdata('type') == 0){ 
                         redirect(base_url().'admin');
                     }
                     elseif($this->session->userdata('type') == 2){
-                        redirect(base_url().'student');
+                        redirect(base_url().'parent');
+                    }
+                    elseif($this->session->userdata('type') == 3){
+                        redirect(base_url().'teacher');
                     }
                     else{
-                        redirect('user');
+                        redirect('student');
                     }
                 }
                 else{
@@ -53,7 +56,15 @@
                 $this->index();
             }
         }
-
+        function logout()
+ 	    {
+		$data = $this->session->all_userdata();
+            foreach($data as $row => $rows_value)
+            {
+            $this->session->unset_userdata($row);
+            }
+            redirect('login');
+        }
     }
 
 

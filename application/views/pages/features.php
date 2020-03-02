@@ -26,17 +26,17 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="<?php echo base_url();?>welcome" class="nav-link">Home</a></li>
                 <li class="active"><a href="<?php echo base_url();?>welcome/features" class="nav-link">Features</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="<?php echo base_url(); ?>welcome/pricing" class="nav-link">Pricing</a></li>
                 
                 <li class="has-children">
                   <a href="<?php echo base_url();?>login" class="nav-link">Account</a>
                   <ul class="dropdown">
                     <li><a href="<?php echo base_url();?>login" class="nav-link">Login</a></li>
                     <li><a href="<?php echo base_url();?>register" class="nav-link">Sign Up</a></li>
-                    <li><a href="<?php echo base_url();?>registerschool" class="nav-link">Sign Up</a></li>
+                    <li><a href="<?php echo base_url();?>registerschool" class="nav-link">Register a School</a></li>
                   </ul>
                 </li>
-                <li><a href="<?php echo base_url();?>contact" class="nav-link">Contact</a></li>
+                <li><a href="<?php echo base_url();?>welcome/contact" class="nav-link">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -73,7 +73,7 @@
               <div class="row justify-content-center">
                 <div class="col-md-7 text-center hero-text">
                   <h1 data-aos="fade-up" data-aos-delay="">IsoMarks Features</h1>
-                  <p class="mb-5" data-aos="fade-up"  data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>  
+                  <p class="mb-5" data-aos="fade-up"  data-aos-delay="100">Our App is lined with features perfect for your school.</p>  
                 </div>
               </div>
             </div>
@@ -119,12 +119,14 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-4 mr-auto">
-              <h2 class="mb-4">Present Designs Inspiration</h2>
-              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur at reprehenderit optio, laudantium eius quod, eum maxime molestiae porro omnis. Dolores aspernatur delectus impedit incidunt dolore mollitia esse natus beatae.</p>
+              <h2 class="mb-4">Branded SMS</h2>
+              <p class="mb-4">Send Text Messages with the name of your School rather than the default IsoMarks Sender ID. For Example if your
+                  School's name is Example High School, Your sender ID could be Example High.
+              </p>
               <p><a href="#">Read More</a></p>
             </div>
             <div class="col-md-6" data-aos="fade-left">
-              <img src="<?php echo base_url(); ?>img/undraw_svg_3.svg" alt="Image" class="img-fluid">
+              <img src="<?php echo base_url(); ?>images/verified.svg" alt="Image" class="img-fluid">
             </div>
           </div>
         </div>
@@ -134,12 +136,12 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-4 ml-auto order-2">
-              <h2 class="mb-4">Powerful App Design </h2>
-              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur at reprehenderit optio, laudantium eius quod, eum maxime molestiae porro omnis. Dolores aspernatur delectus impedit incidunt dolore mollitia esse natus beatae.</p>
+              <h2 class="mb-4">Classroom Tools </h2>
+              <p class="mb-4">With additional tools in the app such as Group Maker, class register and Timer, the teaching experience in the classroom can be an easier one. </p>
               <p><a href="#">Read More</a></p>
             </div>
             <div class="col-md-6" data-aos="fade-right">
-              <img src="<?php echo base_url(); ?>img/undraw_svg_4.svg" alt="Image" class="img-fluid">
+              <img src="<?php echo base_url(); ?>images/mobile_app.svg" alt="Image" class="img-fluid">
             </div>
           </div>
         </div>
@@ -240,10 +242,10 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-6 mr-auto text-center text-md-left mb-5 mb-md-0">
-              <h2>Starts Publishing Your Apps</h2>
+              <h2>Get the Isomarks App</h2>
             </div>
             <div class="col-md-5 text-center text-md-right">
-              <p><a href="#" class="btn"><span class="icofont-brand-apple mr-3"></span>App store</a> <a href="#" class="btn"><span class="icofont-ui-play mr-3"></span>Google play</a></p>
+              <p><a href="#" class="btn"><span class="icofont-ui-play mr-3"></span>Google play</a></p>
             </div>
           </div>
         </div>
