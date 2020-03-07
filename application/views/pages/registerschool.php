@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <body>
     
   <div class="site-wrap">
@@ -61,20 +62,44 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Institution Account</h3></div>
                                     <div class="card-body">
-                                        <form  method="post" action="<?php echo base_url(); ?>register/validation" autocomplete="off">
+                                        <form  runat="server" method="post" action="<?php echo base_url(); ?>registerschool/validation" enctype='multipart/form-data' autocomplete="off">
+                                            
+                                            <div class="form-row">
+                                                <div class="col-md-5">
+                                                    <div class="form-group">
+                                                        <label class="small mb-1" for="imgInp">Upload Logo:</label>
+                                                        <input type="file" name="logo_file" id="imgInp" class="form-control py-2" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="form-group"><img id="blah" src="<?php echo base_url(); ?>images/default_logo.png" alt="logo image" class="img-fluid img-thumbnail" style="height: 30%; width: 30%" /></div>
+                                                </div>
+                                            </div>
                                             <div class="form-row">
                                                 <div class="col-md-4">
                                                     <div class="form-group"><label class="small mb-1" for="inputFirstName">School Code</label><input class="form-control py-4" id="inputSchoolCode" name="schoolCode" type="text" placeholder="School Code" required="true" /></div>
                                                     <span class="text-danger"><?php echo form_error('schoolCode'); ?></span>
                                                   </div>
                                                 <div class="col-md-8">
-                                                    <div class="form-group"><label class="small mb-1" for="inputName">Full Name</label><input class="form-control py-4" id="inputLastName" name="name" type="text" placeholder="Enter Full name" required="true" /></div>
-                                                    <span class="text-danger"><?php echo form_error('name'); ?></span>
+                                                    <div class="form-group"><label class="small mb-1" for="inputName">Institution's Name</label><input class="form-control py-4" id="inputLastName" name="schoolName" type="text" placeholder="Enter Official name" required="true" /></div>
+                                                    <span class="text-danger"><?php echo form_error('schoolName'); ?></span>
                                                 </div>
                                             </div>
-                                            <div class="form-group"><label class="small mb-1" for="inputEmailAddress">Email</label><input class="form-control py-4" id="inputEmailAddress" name="email" type="email" aria-describedby="emailHelp" placeholder="Enter email address" required="true" /><span class="text-danger"><?php echo form_error('email'); ?></span></div>
+
+                                            <div class="form-row">
+                                                <div class="col-md-7">
+                                                    <div class="form-group"><label class="small mb-1" for="inputEmailAddress">Email</label><input class="form-control py-4" id="inputEmailAddress" name="email" type="email" aria-describedby="emailHelp" placeholder="Enter email address" required="true" />
+                                                    <span class="text-danger"><?php echo form_error('email'); ?></span></div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="form-group"><label class="small mb-1" for="phone">Phone</label><input class="form-control py-4" id="phone" name="phone" type="number" placeholder="e.g 0712345678" required="true" />
+                                                    <span class="text-danger"><?php echo form_error('phone'); ?></span></div>
+                                                </div>
+                                                
+                                            </div>
+                                            
                                             <div class="form-row">
                                                 <div class="col-md-6">
                                                     <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" name="inputPword" type="password" placeholder="Enter password" required="true" /></div>
@@ -97,16 +122,30 @@
                                         </form>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <div class="small"><a href="<?php echo base_url(); ?>login">Have an account? Go to login</a></div>
+                                        <div class="small"><a href="#">Not sure about this process? Learn more</a></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-      
+        </main>
 
-      
+        <script>
 
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    
+                    reader.onload = function(e) {
+                    $('#blah').attr('src', e.target.result);
+                    }
+                    
+                    reader.readAsDataURL(input.files[0]);
+                }
+                }
 
-    </main>
+                $("#imgInp").change(function() {
+                readURL(this);
+                });
+        </script>

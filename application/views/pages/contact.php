@@ -33,7 +33,7 @@
                   <ul class="dropdown">
                     <li><a href="<?php echo base_url();?>login" class="nav-link">Login</a></li>
                     <li><a href="<?php echo base_url();?>register" class="nav-link">Sign Up</a></li>
-                    <li><a href="<?php echo base_url();?>registerschool" class="nav-link">Sign Up</a></li>
+                    <li><a href="<?php echo base_url();?>registerschool" class="nav-link">Register School</a></li>
                   </ul>
                 </li>
                 <li class="active"><a href="<?php echo base_url();?>welcome/contact" class="nav-link">Contact</a></li>

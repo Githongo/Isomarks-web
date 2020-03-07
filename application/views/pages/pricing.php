@@ -91,56 +91,30 @@
           
           <div class="row justify-content-center text-center">
             <div class="col-md-7 mb-5">
-              <h2 class="section-heading">Choose A Plan</h2>
-              <p>We have a plan to suit your needs.</p>
+              <h2 class="section-heading">Calculate Price</h2>
+              <p>Our price is based on the size of your school.</p>
             </div>
           </div>
-          <div class="row align-items-stretch">
+          <div class="row justify-content-center">
 
             <div class="col-lg-4 mb-4 mb-lg-0">
               <div class="pricing h-100 text-center">
                 <span>&nbsp;</span>
-                <h3>Basic</h3>
+                <h5>Breakdown</h5>
                 <ul class="list-unstyled">
-                  <li>Create up to 5 forms</li>
-                  <li>Generate 100 monthly reports</li>
+                  <li>Registration fee - KES 10,000</li>
+                  <li>Unit Record fee - KES 20/Student</li>
                 </ul>
+                <input type="number" class="form-control" placeholder="No. of Students" onchange="getTotal(this.value)" autofocus>
+                <div class="my-2"></div>
                 <div class="price-cta">
-                  <strong class="price">Free</strong>
-                  <p><a href="#" class="btn btn-white">Choose Plan</a></p>
+                  <strong class="price" id="Total">KES 10000</strong>
+                  <p><a href="#" class="btn btn-white">Register</a></p>
                 </div>
+                <p id="Promo" style="color: red"></p>
               </div>
             </div>
-            <div class="col-lg-4 mb-4 mb-lg-0">
-              <div class="pricing h-100 text-center popular">
-                <span class="popularity">Most Popular</span>
-                <h3>Professional</h3>
-                <ul class="list-unstyled">
-                  <li>Create up to 20 forms</li>
-                  <li>Generate 2500 monthly reports</li>
-                  <li>Manage a team of up to 5 people</li>
-                </ul>
-                <div class="price-cta">
-                  <strong class="price">$9.95/month</strong>
-                  <p><a href="#" class="btn btn-white">Choose Plan</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mb-4 mb-lg-0">
-              <div class="pricing h-100 text-center">
-                <span class="popularity">Best Value</span>
-                <h3>Ultimate</h3>
-                <ul class="list-unstyled">
-                  <li>Create up to 20 forms</li>
-                  <li>Generate 2500 monthly reports</li>
-                  <li>Manage a team of up to 5 people</li>
-                </ul>
-                <div class="price-cta">
-                  <strong class="price">$199.95/month</strong>
-                  <p><a href="#" class="btn btn-white">Choose Plan</a></p>
-                </div>
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>
@@ -162,3 +136,19 @@
 
 
     </main>
+
+    <script>
+       function getTotal(stdnum){
+          var Total = (stdnum*20)+10000;
+          var SMS = (stdnum*2);
+          document.getElementById('Total').innerHTML = "KES "+Total;
+          if(Total > 12000){
+            document.getElementById('Promo').innerHTML = "Eligible for "+SMS+" free SMS";
+          }
+          
+          else{
+            document.getElementById('Promo').innerHTML = "";
+          }
+      }
+
+    </script>

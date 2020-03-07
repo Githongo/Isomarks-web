@@ -11,7 +11,7 @@
                     <h6 class="m-0 text-primary">Compose Message</h6>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="POST" enctype="multipart/form-data" action="<?php echo base_url(); ?>sendsms">
                             <div>
                             <h7 class="m-0 text-info">Recipients:</h7>
                             </div>
@@ -20,12 +20,12 @@
                                     <div class="col-xl-3">
                                         <i class="fas fa-user"></i>
                                         <label for="contact">Single Contact</label>
-                                        <input type="text" id="contact" class="form-control" maxlength="10" placeholder="e.g 0712345678">
+                                        <input type="text" id="singleContact" name="singleContact" class="form-control" maxlength="10" placeholder="e.g 0712345678">
                                     </div>
                                     <div class="col-xl-3">
                                         <i class="fas fa-file-upload"></i>
                                         <label for="contact">Upload Contacts</label>
-                                        <input type="file" id="contact" class="form-control">
+                                        <input type="file" id="contactFile" name="contactFile" class="form-control">
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="my-2"></div>
@@ -53,12 +53,12 @@
                                 <div class="col-xl-8">
                                     <div class="md-form">
                                     <i class="fas fa-pencil-alt prefix"></i>
-                                    <textarea id="form22" class="md-textarea form-control" rows="5" style="border: 1px solid #186dd6"></textarea>
+                                    <textarea id="form22" name="message" class="md-textarea form-control" rows="5" style="border: 1px solid #186dd6" placeholder="Type message here..."></textarea>
                                     </div>
                                 </div>
                                 <div class="col-xl-4">
                                 <div class="my-2"></div>
-                                    <a href="#" class="btn btn-primary btn-icon-split btn-sm">
+                                    <a href="javascript:$('form').submit();" name="send" class="btn btn-primary btn-icon-split btn-sm">
                                             <span class="icon text-white-50">
                                             <i class="fas fa-paper-plane"></i>
                                             </span>
