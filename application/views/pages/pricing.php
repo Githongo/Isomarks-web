@@ -109,27 +109,12 @@
                 <div class="my-2"></div>
                 <div class="price-cta">
                   <strong class="price" id="Total">KES 10000</strong>
-                  <p><a href="#" class="btn btn-white">Register</a></p>
+                  <p><a href="<?php echo base_url();?>registerschool" class="btn btn-white">Register</a></p>
                 </div>
                 <p id="Promo" style="color: red"></p>
               </div>
             </div>
           
-          </div>
-        </div>
-      </div>
-
-      
-
-      <div class="site-section cta-section">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-6 mr-auto text-center text-md-left mb-5 mb-md-0">
-              <h2>Get the IsoMarks App</h2>
-            </div>
-            <div class="col-md-5 text-center text-md-right">
-              <p><a href="#" class="btn"><span class="icofont-ui-play mr-3"></span>Google play</a></p>
-            </div>
           </div>
         </div>
       </div>

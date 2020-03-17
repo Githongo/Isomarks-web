@@ -1,7 +1,7 @@
 <?php
     class Authentication extends CI_Model{
         public function __construct(){
-            $this->load->library('encrypt');
+            
         }
 
         function can_login($email, $password){

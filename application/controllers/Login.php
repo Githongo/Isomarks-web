@@ -7,7 +7,6 @@
                 //redirect('user/index');
             }
             $this->load->library('form_validation');
-            $this->load->library('encrypt');
             $this->load->model('authentication');
         }
 

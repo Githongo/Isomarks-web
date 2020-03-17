@@ -8,8 +8,6 @@
             <p class="social">
               <a href="#"><span class="icofont-twitter"></span></a>
               <a href="#"><span class="icofont-facebook"></span></a>
-              <a href="#"><span class="icofont-dribbble"></span></a>
-              <a href="#"><span class="icofont-behance"></span></a>
             </p>
           </div>
           <div class="col-md-7 ml-auto">
@@ -17,25 +15,23 @@
               <div class="col-md-4 mb-4 mb-md-0">
                 <h3>Navigation</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">Pricing</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="<?php echo base_url();?>welcome/pricing">Pricing</a></li>
+                  <li><a href="<?php echo base_url();?>welcome/features">Features</a></li>
+                  <li><a href="<?php echo base_url();?>login">Login</a></li>
+                  <li><a href="<?php echo base_url();?>welcome/contact">Contact</a></li>
                 </ul>
               </div>
               <div class="col-md-4 mb-4 mb-md-0">
                 <h3>Services</h3>
                 <ul class="list-unstyled">
                   <li><a href="#">Team</a></li>
-                  <li><a href="#">Collaboration</a></li>
-                  <li><a href="#">Todos</a></li>
-                  <li><a href="#">Events</a></li>
+                  <li><a href="https://www.isobrand.co.ke">Collaboration</a></li>
                 </ul>
               </div>
               <div class="col-md-4 mb-4 mb-md-0">
                 <h3>Downloads</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">Get from the App Store</a></li>
+                  <li><a href="#">Download APK</a></li>
                   <li><a href="#">Get from the Play Store</a></li>
                 </ul>
               </div>

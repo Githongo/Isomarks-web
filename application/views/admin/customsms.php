@@ -55,6 +55,7 @@
                                     <i class="fas fa-pencil-alt prefix"></i>
                                     <textarea id="form22" name="message" class="md-textarea form-control" rows="5" style="border: 1px solid #186dd6" placeholder="Type message here..."></textarea>
                                     </div>
+                                    <span class="text-danger"><?php echo form_error('message'); ?></span>
                                 </div>
                                 <div class="col-xl-4">
                                 <div class="my-2"></div>

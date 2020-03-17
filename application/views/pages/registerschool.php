@@ -122,12 +122,49 @@
                                         </form>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <div class="small"><a href="#">Not sure about this process? Learn more</a></div>
+                                        <div class="small"><a href="#" data-toggle="modal" data-target="#infoModal" >Not sure about this process? Click here.</a></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- About School Registration Modal -->
+                    <div class="modal " id="infoModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 id="item_name" class="modal-title">About Registration in IsoMarks</h4>
+                            <button onclick="location.reload()" type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body" id="modal_body">
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea<br>
+                         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                         iatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
+                         laborum.<br>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea<br>
+                         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                         iatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
+                         laborum.
+                        </p>
+
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <h6>Any further clarification? Email to <a href="mailto: info@isomarks.co.ke">info@isomarks.co.ke</a><h6>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!--modale end-->
 
         </main>
 

@@ -33,9 +33,9 @@ class Registerschool extends CI_Controller {
 
                 $config['upload_path']          = './uploads/';
                 $config['allowed_types']        = 'jpeg|jpg|png';
-                $config['max_size']             = 1000;
-                $config['max_width']            = 800;
-                $config['max_height']           = 800;
+                $config['max_size']             = 2000;
+                $config['max_width']            = 0;
+                $config['max_height']           = 0;
 
                 $this->load->library('upload', $config);
 
