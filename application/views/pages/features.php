@@ -91,7 +91,7 @@
               <h2 class="mb-4">Seamlessly Communicate</h2>
               <p class="mb-4">Communicate to parents as well as students through the messaging service. You can use it to send 
                   student results or general communication to specific or all parents.</p>
-              <p><a href="#">Read More</a></p>
+              <p><a href="<?php echo base_url()?>welcome/#mydiv">Read More</a></p>
             </div>
             <div class="col-md-6" data-aos="fade-left">
               <img src="<?php echo base_url(); ?>images/mail.svg" alt="Image" class="img-fluid">

@@ -1,6 +1,8 @@
 <?php
 require 'vendor/autoload.php';
 use AfricasTalking\SDK\AfricasTalking;
+
+ini_set('max_execution_time', 3000);//for 300 seconds
 class SMS_model extends CI_Model{
     function sendsms($single_contact, $message){
         // Set your app credentials
@@ -14,8 +16,9 @@ class SMS_model extends CI_Model{
             $sms        = $AT->sms();
 
             // Set the numbers you want to send to in international format
-            $phone = substr($single_contact, 1);
-            $recipients = "+254" . $phone;
+            $single_contact_trim = preg_replace('/\s/', '', $single_contact);
+            $phone = substr($single_contact_trim, 1);
+            $recipient = "+254" . $phone;
 
 
             // Set your shortCode or senderId
@@ -26,7 +29,7 @@ class SMS_model extends CI_Model{
                 try {
                     // Thats it, hit send and we'll take care of the rest
                     $result = $sms->send([
-                        'to'      => $recipients,
+                        'to'      => $recipient,
                         'message' => $message,
                         'from'    => $from
                     ]);
@@ -67,10 +70,44 @@ class SMS_model extends CI_Model{
         var_dump($the_big_array);
         echo "</pre>";
 
-
+        $recipients = "+254710113242";
         foreach($the_big_array as $r){
-            $this->sms_model->sendsms($r[1], $Message);
+            //$this->sms_model->sendsms($r[1], $Message);
+            
+            $single_contact_trim = preg_replace('/\s/', '', $r[1]);
+            $phone = substr($single_contact_trim, 1);
+            $torecipient = "+254" . $phone;
+
+            $recipients .= ",".$torecipient;
+            
         }
+        echo $recipients;
+
+        //API Call
+            $username   = "tetrasms";
+            $apiKey     = "fc4189a9408886c4ea089277c3189b53db65baddd8050d6ea15d55be3985d186";
+
+            // Initialize the SDK
+            $AT         = new AfricasTalking($username, $apiKey);
+
+            // Get the SMS service
+            $sms        = $AT->sms();
+
+            // Set your shortCode or senderId
+            $from       = "TetraConcpt";
+           
+                try {
+                    $result = $sms->send([
+                        'to'      => $recipients,
+                        'message' => $Message,
+                        'from'    => $from
+                    ]);
+    
+                    print_r($result);
+                    echo json_encode($result);
+                } catch (Exception $e) {
+                    echo "Error: ".$e->getMessage();
+                }
 
 
         }
